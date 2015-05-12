@@ -37,3 +37,11 @@ function add(p1, p2) {
   return Number(p1) + Number(p2)
 }
 add = PromiseAcceptor(add)
+
+if (module && module.exports) {
+  module.exports.Constant = Constant
+  module.exports.Promisify = Promisify
+  module.exports.PromiseAcceptor = PromiseAcceptor
+  module.exports.cbToPromise = cbToPromise
+  module.exports.add = add
+}
