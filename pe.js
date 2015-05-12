@@ -38,7 +38,7 @@ function add(p1, p2) {
 }
 add = PromiseAcceptor(add)
 
-if (module && module.exports) {
+if (typeof module !== "undefined" && module.exports instanceof Object) {
   module.exports.Constant = Constant
   module.exports.Promisify = Promisify
   module.exports.PromiseAcceptor = PromiseAcceptor
